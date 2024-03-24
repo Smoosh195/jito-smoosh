@@ -27,16 +27,16 @@ pub type Result<T> = std::result::Result<T, TpuSenderError>;
 
 /// Send at ~100 TPS
 #[cfg(feature = "spinner")]
-pub(crate) const SEND_TRANSACTION_INTERVAL: Duration = Duration::from_millis(10);
+pub(crate) const SEND_TRANSACTION_INTERVAL: Duration = Duration::from_millis(1);
 /// Retry batch send after 4 seconds
 #[cfg(feature = "spinner")]
-pub(crate) const TRANSACTION_RESEND_INTERVAL: Duration = Duration::from_secs(4);
+pub(crate) const TRANSACTION_RESEND_INTERVAL: Duration = Duration::from_secs(1);
 
 /// Default number of slots used to build TPU socket fanout set
-pub const DEFAULT_FANOUT_SLOTS: u64 = 12;
+pub const DEFAULT_FANOUT_SLOTS: u64 = 100;
 
 /// Maximum number of slots used to build TPU socket fanout set
-pub const MAX_FANOUT_SLOTS: u64 = 100;
+pub const MAX_FANOUT_SLOTS: u64 = 200;
 
 /// Config params for `TpuClient`
 #[derive(Clone, Debug)]
