@@ -32,7 +32,7 @@ use {
 };
 
 const BLOCKHASH_REFRESH_RATE: Duration = Duration::from_secs(5);
-const TPU_RESEND_REFRESH_RATE: Duration = Duration::from_millils(1);
+const TPU_RESEND_REFRESH_RATE: Duration = Duration::from_millis(1);
 const SEND_INTERVAL: Duration = Duration::from_millis(1);
 type QuicTpuClient = TpuClient<QuicPool, QuicConnectionManager, QuicConfig>;
 
