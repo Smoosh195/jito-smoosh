@@ -42,7 +42,7 @@ use {
     tokio::{task::JoinHandle, time::timeout},
 };
 
-const WAIT_FOR_STREAM_TIMEOUT: Duration = Duration::from_millis(100);
+const WAIT_FOR_STREAM_TIMEOUT: Duration = Duration::from_millis(1000);
 pub const DEFAULT_WAIT_FOR_CHUNK_TIMEOUT: Duration = Duration::from_secs(10);
 
 pub const ALPN_TPU_PROTOCOL_ID: &[u8] = b"solana-tpu";
