@@ -31,9 +31,9 @@ use {
     tokio::{sync::RwLock, task::JoinHandle, time::Instant},
 };
 
-const BLOCKHASH_REFRESH_RATE: Duration = Duration::from_secs(10);
-const TPU_RESEND_REFRESH_RATE: Duration = Duration::from_secs(2);
-const SEND_INTERVAL: Duration = Duration::from_millis(10);
+const BLOCKHASH_REFRESH_RATE: Duration = Duration::from_secs(5);
+const TPU_RESEND_REFRESH_RATE: Duration = Duration::from_millils(1);
+const SEND_INTERVAL: Duration = Duration::from_millis(1);
 type QuicTpuClient = TpuClient<QuicPool, QuicConnectionManager, QuicConfig>;
 
 #[derive(Clone, Debug)]
